@@ -25,4 +25,4 @@ We need to run RainyCases.py separately because this script relies on organized 
 
 (the Forecast files (that start with "Fore") are used to sort and organise from various climate models licensed by various instituitions)
 
-All intellectual property rights for all the code belong to Harmya Bhatt.
+All intellectual property rights for the code belong to Harmya Bhatt.
