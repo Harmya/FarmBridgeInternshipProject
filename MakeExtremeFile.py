@@ -1,4 +1,6 @@
 import csv
+# this script creates a file for storing extremem rainfall data
+
 csv_file = open('D:/IMDdata/SortedData/rainCasesExtreme.csv' , 'w', newline='')
 csv_writer = csv.writer(csv_file)
 extreme_months = ['Rainy Days > 25mm', 'Annual', 'Winter', 'Summer', 'SWM', 'NEM', 'Rainy days > 50mm', 'Annual', 'Winter', 'Summer', 'SWM', 'NEM', 'Rainy days > 75 mm', 'Annual', 'Winter', 'Summer', 'SWM', 'NEM']  

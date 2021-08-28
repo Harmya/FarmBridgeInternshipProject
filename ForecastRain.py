@@ -1,17 +1,23 @@
-
+# this script organizes the forecast data for rain into specific seasons for india
 import FinalYearRain
 import pandas as pd
 import csv
 
 
 def forecast():
-    file_to_read = 'D:/IMDdata/Precipitation.csv'
+    file_to_read = 'D:/IMDdata/CCCmaPrecipitation.csv'
     output_file = 'D:/IMDdata/ForecastRain.csv'
+    # change the path to the directory where you have stored the forecast models for the rain file
+    # here, CCCma is a type of forecast model licensed to the company by an instituition
+    # for intellectual property reasons, I cannot display the code we used to operate on the forecast
+    # hence this is a snippet to show how we organized the files into specific seasons
     df = pd.read_csv(file_to_read)
     df_new = pd.read_csv(output_file)
     months = ['Annual', 'Winter', 'Summer', 'SWM', 'NEM', 'January', 'February', 'March', 'April', 'May',
               'June',
               'July', 'August', 'September', 'October', 'November', 'December']
+    # SWM: South West Monsoon
+    # NEM: North East Monsooon
     df_new[str(df.iloc[0,0])] = months
                    
     c = 1

@@ -1,17 +1,14 @@
 import pandas as pd
 import csv
 import statistics
-
+# this script calculates the MEAN maximum temperature for each specified month in Celsius 
 
 def max_average_val(year, lat,lon, variable):
-    
-
 
     csv_file = open('D:/IMDdata/tmax/' + str(year) + '_' + str(variable) + '_' + str(lat) + '_' + str(lon) + '.csv' , 'r')
     csv_reader = csv.reader(csv_file)
-    # each file of tmax/tmax/rain will be opened
+    # each file of tmax will be opened
     next(csv_reader)
-    
 
     days = [31,28,31,30,31,30,31,31,30,31,30,31]
     if year % 4 == 0:
@@ -22,8 +19,6 @@ def max_average_val(year, lat,lon, variable):
         days[1] = 28
         days_loop = 365
         
-
-    
     monthly_mean = []
     temp_dec = []
     check = 0

@@ -1,7 +1,7 @@
 import pandas as pd
 import csv
 import statistics
-
+# this script calculates the MEAN minimum temperature for each specified month in Celsius
 
 
 def min_average_val(year, lat, lon, variable):
@@ -10,7 +10,7 @@ def min_average_val(year, lat, lon, variable):
 
     csv_file = open('D:/IMDdata/tmin/' + str(year) + '_' + str(variable) + '_' + str(lat) + '_' + str(lon) + '.csv' , 'r')
     csv_reader = csv.reader(csv_file)
-    # each file of tmax/tmax/rain will be opened
+    # each file of tmin will be opened
     next(csv_reader)
     
 

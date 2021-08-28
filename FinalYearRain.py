@@ -1,7 +1,10 @@
 import statistics
 import pandas as pd
 import csv
+# ONLY RUN THIS SCRIPT IF THERE IS AN ERROR IN GETTING THE FILES FOR THE YEAR 2099 
+# CREATED THIS FILE TO ADDRESS ERRORS IN SOME CASES 
 
+'''
 
 def get_it(file_to_read, output_file):
     df = pd.read_csv(file_to_read)
@@ -9,14 +12,13 @@ def get_it(file_to_read, output_file):
     c = 1
     year = 2021
     sum_temp = []
-
     days = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-
+    #   a list for days in a month
     if year % 4 == 0:
         days[1] = 29
     else:
         days[1] = 28
-
+    # changing the days according to leap year
     for x in range(1116, 1128):
 
         val = str(df.iloc[x, 1])
@@ -36,3 +38,5 @@ def get_it(file_to_read, output_file):
             df_new.to_csv(output_file, index=False)
             year += 1
             c = 1
+
+            '''

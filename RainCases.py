@@ -1,7 +1,8 @@
 import pandas as pd
 import csv
 import operator
-
+# this script calculates the number of extreme rainfall cases in Celsius 
+# three categories: <25mm, >50mm and >75mm
 
 def extreme_rainfall(year, lat, lon, variable):
     
@@ -80,11 +81,13 @@ def extreme_rainfall(year, lat, lon, variable):
     df_new[str(year)] = final_list
     df_new.to_csv('D:/IMDdata/SortedData/rainCasesExtreme.csv', index=False)
 
+#input here
+# PLEASE CHECK INPUT BEFORE RUNNING THE SCRIPT 
 
-lat = '23.50'
-lon ='78.22'
-start_year = 2018
-end_year = 2020
+lat = '00'
+lon = '00'
+start_year = 2018 # input
+end_year = 2020 #input
 
 for x in range(start_year, end_year + 1):
     extreme_rainfall(x, lat,lon, 'rain')

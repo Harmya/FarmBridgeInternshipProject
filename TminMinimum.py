@@ -1,19 +1,16 @@
 import pandas as pd
 import csv
 import operator
-
+# this script calculates the MINIMUM temperature for each specified month in Celsius 
 
 
 def min_val(year, lat, lon, variable):
     
-
-
     csv_file = open('D:/IMDdata/tmin/' + str(year) + '_' + str(variable) + '_' + str(lat) + '_' + str(lon) + '.csv' , 'r')
     csv_reader = csv.reader(csv_file)
-    # each file of tmin/tmin/rain will be opened
+    # each file of tmin will be opened
     next(csv_reader)
     
-
     days = [31,28,31,30,31,30,31,31,30,31,30,31]
     if year % 4 == 0:
         days[1] = 29
@@ -23,8 +20,6 @@ def min_val(year, lat, lon, variable):
         days[1] = 28
         days_loop = 365
         
-
-    
     monthly_min = []
     temp_dec = []
     check = 0

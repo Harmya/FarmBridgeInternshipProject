@@ -1,17 +1,35 @@
+# this script organizes the forecast data for tmax into specific seasons for india
 import statistics
 import pandas as pd
 import csv
 import FinalYearTmax
 
 def monthly_fore():
-    file_to_read = 'D:/IMDdata/Tmax.csv'
+    file_to_read = 'D:/IMDdata/Tmax.csv' 
+    # change the path to the directory where you have stored the tmax file 
     output_file = 'D:/IMDdata/TMaxCCCma.csv'
-
+    # change the path to the directory where you have stored the forecast models for the tmax file
+    # here, CCCma is a type of forecast model licensed to the company by an instituition
+    # for intellectual property reasons, I cannot display the code we used to operate on the forecast
+    # hence this is a snippet to show how we organized the files into specific seasons
+    # SWM: South West Monsoon
+    # NEM: North East Monsooon
     df = pd.read_csv(file_to_read)
     df_new = pd.read_csv(output_file)
+    df = pd.read_csv(file_to_read)
+    df_new = pd.read_csv(output_file)
+    months = ['Annual', 'Winter', 'Summer', 'SWM', 'NEM', 'January', 'February', 'March', 'April', 'May',
+              'June',
+              'July', 'August', 'September', 'October', 'November', 'December']
     c = 1
     year = 2021
     sum_temp = []
+    days = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+    if year % 4 == 0:
+        days[1] = 29
+    else:
+        days[1] = 28
     for x in range(180, 1128):
 
         val = df.iloc[x, 1]
@@ -28,7 +46,6 @@ def monthly_fore():
             df_new[str(year)] = temp_year
             df_new.to_csv(output_file, index=False)
             c = 1
-            print(year)
             year += 1
             sum_temp.clear()
             temp_year.clear()

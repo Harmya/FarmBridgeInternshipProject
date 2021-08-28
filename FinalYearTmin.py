@@ -1,8 +1,10 @@
 import statistics
 import pandas as pd
 import csv
+# ONLY RUN THIS SCRIPT IF THERE IS AN ERROR IN GETTING THE FILES FOR THE YEAR 2099 
+# CREATED THIS FILE TO ADDRESS ERRORS IN SOME CASES 
 
-
+'''
 def get_it(file_to_read, output_file):
     df = pd.read_csv(file_to_read)
     df_new = pd.read_csv(output_file)
@@ -36,7 +38,7 @@ def get_it(file_to_read, output_file):
             df_new.to_csv(output_file, index=False)
             year += 1
             c = 1
-            
+'''
 
 
 
