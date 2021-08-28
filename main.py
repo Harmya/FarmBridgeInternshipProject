@@ -7,9 +7,8 @@ import TminMinimum
 import TotalRain
 import RainyDays
 import MakeExtremeFile
-# ONLY RUN THIS SCRIPT FOR ORGANIZING DATA
-
-
+# RUN THIS SCRIPT FOR ORGANIZING DATA
+# This is the main script 
 # input data down here
 # default inputs are 1990, 2020 for start and end year
 # latitude is 00 and longitude is 00
