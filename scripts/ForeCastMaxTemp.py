@@ -1,7 +1,6 @@
 # this script organizes the forecast data for tmax into specific seasons for india
 import statistics
 import pandas as pd
-import csv
 import FinalYearTmax
 
 def monthly_fore():

@@ -1,7 +1,6 @@
 # this script organizes the forecast data for rain into specific seasons for india
 import FinalYearRain
 import pandas as pd
-import csv
 
 
 def forecast():

@@ -1,7 +1,6 @@
 # this script organizes the forecast data for tmin into specific seasons for india
 import statistics
 import pandas as pd
-import csv
 import FinalYearTmin
 
 def monthly_fore():

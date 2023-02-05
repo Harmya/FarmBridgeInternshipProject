@@ -1,12 +1,6 @@
-import DownloadCsv
-import MakeMonthlyFiles
-import TmaxAverage
-import TmaxMaximum
-import TminAverage
-import TminMinimum
-import TotalRain
-import RainyDays
-import MakeExtremeFile
+from scripts import TmaxAverage, TminMinimum, DownloadCsv, RainyDays, MakeMonthlyFiles, TotalRain, MakeExtremeFile, \
+    TmaxMaximum, TminAverage
+
 # RUN THIS SCRIPT FOR ORGANIZING DATA
 # This is the main script 
 # input data down here
@@ -23,8 +17,8 @@ variable_one = 'tmax'
 variable_two = 'tmin'
 variable_three = 'rain'
 #Step One: Downloads all the files in grid format and converts them to csv
-DownloadCsv.downloadFiles(start_year, end_year, latitude, longitude, variable_one )
-DownloadCsv.downloadFiles(start_year, end_year, latitude, longitude, variable_two )
+DownloadCsv.downloadFiles(start_year, end_year, latitude, longitude, variable_one)
+DownloadCsv.downloadFiles(start_year, end_year, latitude, longitude, variable_two)
 DownloadCsv.downloadFiles(start_year, end_year, latitude, longitude, variable_three)
 #Step Two: Makes empty orgnized files to fill in data from the downloaded files
 MakeMonthlyFiles.create_file()
